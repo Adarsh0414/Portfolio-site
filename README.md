@@ -2,7 +2,7 @@
 
 This is a personal portfolio website created to showcase projects, skills, and experience. It is a single-page website built with HTML, CSS, and JavaScript.
 
-## Portfolio Snaps
+## Portfolio Site Snap
 <img width="1846" height="931" alt="image" src="https://github.com/user-attachments/assets/40e5cbdc-b064-4e69-b636-a3041935ed29" />
 
 
