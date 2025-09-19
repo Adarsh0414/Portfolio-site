@@ -2,6 +2,10 @@
 
 This is a personal portfolio website created to showcase projects, skills, and experience. It is a single-page website built with HTML, CSS, and JavaScript.
 
+## Portfolio Snaps
+<img width="1846" height="931" alt="image" src="https://github.com/user-attachments/assets/40e5cbdc-b064-4e69-b636-a3041935ed29" />
+
+
 ## Table of Contents
 
 - [Features](#features)
@@ -40,12 +44,12 @@ This is a personal portfolio website created to showcase projects, skills, and e
 - **`Portfoliostyle.css`**: The stylesheet for the website, which controls the layout, colors, and fonts.
 - **`Portfolio.js`**: The JavaScript file that adds interactivity to the website, such as the typing animation.
 - **`Adarsh Kumar Singh_Resume.pdf`**: The resume file that can be downloaded.
-- **`README.md`**: This file, providing information about the project.
+- **`README.md`**: This file provides information about the project.
 - **`assets/`**: A directory containing images and other assets used in the website.
 
 ## Getting Started
 
-To view the website, simply open the `index.html` file in your web browser.
+To view the website, please visit this link: https://adarsh0414.github.io/Portfolio-site/.
 
 ## Customization
 
