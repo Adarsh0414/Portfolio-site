@@ -24,7 +24,7 @@ This is a personal portfolio website created to showcase projects, skills, and e
 ```
 .
 ├── Adarsh Kumar Singh_Resume.pdf
-├── Portfolio.html
+├── index.html
 ├── Portfolio.js
 ├── Portfoliostyle.css
 ├── README.md
@@ -36,7 +36,7 @@ This is a personal portfolio website created to showcase projects, skills, and e
     └── WellnessHub.png
 ```
 
-- **`Portfolio.html`**: The main HTML file that contains the structure and content of the website.
+- **`index.html`**: The main HTML file that contains the structure and content of the website.
 - **`Portfoliostyle.css`**: The stylesheet for the website, which controls the layout, colors, and fonts.
 - **`Portfolio.js`**: The JavaScript file that adds interactivity to the website, such as the typing animation.
 - **`Adarsh Kumar Singh_Resume.pdf`**: The resume file that can be downloaded.
@@ -45,11 +45,11 @@ This is a personal portfolio website created to showcase projects, skills, and e
 
 ## Getting Started
 
-To view the website, simply open the `Portfolio.html` file in your web browser.
+To view the website, simply open the `index.html` file in your web browser.
 
 ## Customization
 
-You can customize the portfolio with your own information by editing the `Portfolio.html` file. Here are some of the things you can change:
+You can customize the portfolio with your own information by editing the `index.html` file. Here are some of the things you can change:
 
 - **Profile Picture**: Replace `assets/trial1.jpg` with your own profile picture.
 - **Name and Social Media**: Update the name and social media links in the sidebar.
