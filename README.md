@@ -51,19 +51,6 @@ This is a personal portfolio website created to showcase projects, skills, and e
 
 To view the website, please visit this link: https://adarsh0414.github.io/Portfolio-site/.
 
-## Customization
-
-You can customize the portfolio with your own information by editing the `index.html` file. Here are some of the things you can change:
-
-- **Profile Picture**: Replace `assets/trial1.jpg` with your own profile picture.
-- **Name and Social Media**: Update the name and social media links in the sidebar.
-- **About Section**: Change the text in the "About" section to describe yourself.
-- **Job Titles**: Modify the `titles` array in `Portfolio.js` to change the dynamic job titles.
-- **Projects**: Update the "Projects" section with your own projects. You will need to add your project images to the `assets` directory.
-- **Certificates & Achievements**: Add or remove certificates and achievements.
-- **Education**: Update the "Education" section with your own educational background.
-- **Resume**: Replace `Adarsh Kumar Singh_Resume.pdf` with your own resume file.
-
 ## Technologies Used
 
 - **HTML5**: For the structure and content of the website.
