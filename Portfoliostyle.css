@@ -1,0 +1,419 @@
+/* Define the variable globally */
+:root {
+  --framer-font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: var(--framer-font-family);
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--framer-font-family);
+  background-color: #000000;
+  color: #f0f0f0;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1900px;
+  margin: 55px;
+  padding: 20px;
+  gap: 70px;
+}
+
+/* Left Sidebar */
+.sidebar {
+  flex: none;
+  background: #181818;
+  border-radius: 30px;
+  box-shadow: 0 0 30px #0006;
+  padding: 20px 20px;
+  min-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: sticky;
+  top: 60px;
+  height: fit-content;
+
+  /* Border via custom properties */
+  --border-bottom-width: 1px;
+  --border-color: rgba(255,255,255,0.07);
+  --border-left-width: 1px;
+  --border-right-width: 1px;
+  --border-style: solid;
+  --border-top-width: 1px;
+  border-width: var(--border-top-width) var(--border-right-width) var(--border-bottom-width) var(--border-left-width);
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  
+  will-change: transform, opacity;
+  transform: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Profile Pic */
+.profile-pic {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: fill; 
+}
+
+/* Name */
+.name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Availability */
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0.12);
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.availability-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #43d675;
+  border-radius: 50%;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 20px;
+}
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease;
+}
+.social-links a:hover {
+  background-color: #0fbcf9;
+  box-shadow: 0 0 10px #0fbcf9;
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+  fill: #999;
+  transition: fill 0.3s ease;
+}
+.social-links a:hover svg {
+  fill: #fff;
+}
+
+/* Action Buttons */
+.btn-group {
+  justify-content: center;
+  padding: 0;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  gap: 12px;
+  width: 200px;
+}
+
+.btn {
+  gap: 5px;
+  font-size: 14px;
+  line-height: 1em;
+  /* Update font-family here, or inherit from global */
+  font-family: var(--framer-font-family);
+  font-weight: 500;
+  width: 900px;
+  height: 30px;
+  display: flex;
+  place-items: center;
+  text-decoration: none;
+  font-style: normal;
+  letter-spacing: 0em;
+  padding: 20px 20px;
+  color: rgb(191, 191, 191);
+  background-color: rgb(31, 31, 31);
+  border-radius: 200px;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
+.btn-primary {
+  height: 30px;
+  width: 900px;
+  background-color: rgb(40, 233, 140);
+  color: #000000;
+}
+
+.btn:hover {
+  background-color: #0a91b8;
+  border-color: #0a91b8;
+  box-shadow: 0 0 15px #0a91b8;
+  color: white;
+}
+
+/* Right Content */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow-x: hidden;
+}
+
+/* Animation */
+#dynamic-job-container {
+  width: 700px; /* Adjust width to fit longest job title */
+  height: 2.8rem; /* reserve vertical space */
+  overflow: hidden;
+  text-align: left;
+}
+
+#dynamic-job-title {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: bottom;
+  line-height: 1;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  /* Set the width to the longest title's width to keep space reserved */
+  min-width: 14ch; /* About 14 characters width, adjust as needed */
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--framer-font-family);
+}
+.section-title svg {
+  width: 28px;
+  height: 28px;
+}
+
+.education-item, .project-item, .certificate-item {
+  background: #141414;
+  border-radius: 14px;
+  padding: 20px 25px;
+  box-shadow: 0 0 15px rgba(67,214,117,0.15);
+  color: #d1d1d1;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+  font-family: var(--framer-font-family);
+}
+.education-item:hover, .project-item:hover, .certificate-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px #43d675;
+}
+.education-degree, .project-title, .certificate-degree {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #0fbcf9;
+  font-family: var(--framer-font-family);
+}
+.education-institution, .project-category, .certificate-institution {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 8px;
+  font-family: var(--framer-font-family);
+}
+.education-duration, .certificate-duration {
+  font-size: 0.85rem;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 4px 12px;
+  display: inline-block;
+  color: #43d675;
+  font-weight: 600;
+  font-family: var(--framer-font-family);
+}
+.education-desc, .certificate-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #bbb;
+  font-family: var(--framer-font-family);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 20px;
+}
+.project-item img {
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px #0fbcf9;
+  transition: transform 0.3s ease;
+}
+.project-item img:hover {
+  transform: scale(1.05);
+}
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #43d675;
+  transition: color 0.3s ease;
+}
+.project-link:hover {
+  color: #0fbcf9;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px 35px;
+  background: #121212;
+  color: #888;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: var(--framer-font-family);
+}
+footer .footer-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .footer-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #43d675;
+}
+footer .footer-center img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  object-fit: cover;
+}
+
+/* Buttons hover effect */
+.btn:focus-visible {
+  outline: 3px solid #0fbcf9;
+  outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .container {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;
+    top: auto;
+    padding: 20px 15px;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
+    overflow-x: auto;
+    border-radius: 0 0 20px 20px;
+  }
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+    border-width: 3px;
+  }
+  .btn-group {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .btn {
+    flex: 1 0 48%;
+    white-space: nowrap;
+  }
+  .content {
+    gap: 40px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+}
