@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     particle.style.backgroundColor = color;
     particle.style.boxShadow = `0 0 10px ${color}`;
 
-    particle.style.left = e.clientX + 'px';
-    particle.style.top = e.clientY + 'px';
+    particle.style.left = (e.pageX) + 'px';
+    particle.style.top = (e.pageY) + 'px';
 
     particle.addEventListener('animationend', () => {
       particle.remove();
