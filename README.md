@@ -21,7 +21,7 @@ This is a personal portfolio website created to showcase projects, skills, and e
 - **Project Showcase**: A dedicated section to display projects with images, descriptions, and links.
 - **Experience and Education**: Sections to list work experience, education, and certifications.
 - **Downloadable Resume**: A button to download the resume.
-- **Contact Information**: Social media links and a "Contact Me" button.
+- **Contact Information**: Social media links and there is a "Contact Me" button.
 
 ## File Structure
 
